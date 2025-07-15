@@ -10,28 +10,6 @@ La Igualitària és una cooperativa de consum autogestionada i participativa ubi
 - [React Router](https://reactrouter.com/) per a la navegació
 - [Lucide Icons](https://lucide.dev/) per a icones SVG
 
-## 📦 Instal·lació
-
-1. **Clona el repositori:**
-
-   ```sh
-   git clone https://github.com/nom-usuari/la-igualitaria.git
-   cd la-igualitaria
-   ```
-
-2. **Instal·la les dependències:**
-
-   ```sh
-   npm install
-   ```
-
-3. **Inicia el servidor de desenvolupament:**
-
-   ```sh
-   npm run dev
-   ```
-
-4. Obre [http://localhost:5173](http://localhost:5173) al navegador.
 
 ## 🗂️ Estructura del projecte
 
