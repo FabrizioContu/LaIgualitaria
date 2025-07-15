@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# La Igualitària
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+La Igualitària és una cooperativa de consum autogestionada i participativa ubicada al barri de Poble-sec, Barcelona. Aquesta aplicació web permet conèixer el projecte, els seus valors, proveïdors, activitats i facilita la participació de noves persones sòcies.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) per al bundling i desenvolupament ràpid
+- [Tailwind CSS](https://tailwindcss.com/) per a l'estilització
+- [React Router](https://reactrouter.com/) per a la navegació
+- [Lucide Icons](https://lucide.dev/) per a icones SVG
 
-## Expanding the ESLint configuration
+## 📦 Instal·lació
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clona el repositori:**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+   ```sh
+   git clone https://github.com/nom-usuari/la-igualitaria.git
+   cd la-igualitaria
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instal·la les dependències:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```sh
+   npm install
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. **Inicia el servidor de desenvolupament:**
+
+   ```sh
+   npm run dev
+   ```
+
+4. Obre [http://localhost:5173](http://localhost:5173) al navegador.
+
+## 🗂️ Estructura del projecte
+
+- `src/` — Codi font principal
+  - `components/` — Components reutilitzables (Navbar, Footer, Layout, etc.)
+  - `pages/` — Pàgines principals de l'aplicació (Home, Qui Som, Comunitat, etc.)
+  - `assets/` — Imatges i icones
+  - `lib/` — Utilitats i helpers
+- `public/` — Recursos públics
+- `index.html` — Entrada principal de l'app
+
+## 🚀 Scripts
+
+- `npm run dev` — Inicia el servidor de desenvolupament
+- `npm run build` — Genera la build de producció
+- `npm run preview` — Previsualitza la build de producció
+- `npm run lint` — Linting del codi
+
+## 📄 Llicència
+
+Aquest projecte està sota llicència MIT.
+
+---
+
+**Contacte:**  
+Carrer Vallhonrat, 18, 08004 Barcelona  
+laigualitaria@cooperasec.org  
++34 931947646
+
+Visita'ns i forma
