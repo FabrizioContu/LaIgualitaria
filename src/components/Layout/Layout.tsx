@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-dvh w-dvw">
+    <div className="flex flex-col min-h-dvh w-dvw pt-10 ">
       <Navbar />
       <main className="flex-grow font-poppins" id="main-content" tabIndex={-1}>
         {children}

@@ -158,7 +158,7 @@ const Proveidors = () => {
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-4 py-2 text-sm rounded-full ${
                   activeCategory === category.id
-                    ? "bg-primary text-secondary"
+                    ? "bg-primary text-pink-600"
                     : "bg-gray-100 text-primary hover:bg-gray-200"
                 }`}
               >

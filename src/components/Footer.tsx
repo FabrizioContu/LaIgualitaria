@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoText from "../assets/logoTextWhite.webp";
+import LogoBillet from "../assets/LogoBillet.png";
 
 import somLaClau from "../assets/somLaClau.webp";
 import logos_peu from "../assets/logos_peu.webp";
@@ -11,9 +11,9 @@ const Footer = () => {
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-4 xl:col-span-1">
               <img
-                src={logoText}
+                src={LogoBillet}
                 alt="La Igualitària"
-                className="h-14 w-auto mb-4"
+                className="h-32 w-auto mb-4"
               />
               <p className="text-white/90 max-w-xs">
                 Cooperativa de consum autogestionada i participativa que ofereix
@@ -73,7 +73,7 @@ const Footer = () => {
                     <li>
                       <Link
                         to="/"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Inici
                       </Link>
@@ -81,7 +81,7 @@ const Footer = () => {
                     <li>
                       <Link
                         to="/qui-som"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Qui Som
                       </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
                     <li>
                       <Link
                         to="/fer-se-soci"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Fer-se Soci
                       </Link>
@@ -104,7 +104,7 @@ const Footer = () => {
                     <li>
                       <Link
                         to="/comunitat"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Comunitat
                       </Link>
@@ -112,7 +112,7 @@ const Footer = () => {
                     <li>
                       <Link
                         to="/proveidors"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Proveïdors
                       </Link>
@@ -120,7 +120,7 @@ const Footer = () => {
                     <li>
                       <a
                         href="#"
-                        className="text-base text-white/90 hover:text-white"
+                        className="text-base text-white/90 hover:text-white hover:font-semibold"
                       >
                         Blog
                       </a>

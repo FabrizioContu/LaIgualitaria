@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gray-50 shadow-sm" role="banner">
+    <header className="bg-primary shadow-sm fixed top-0 w-full z-50">
       <nav
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Primary"
@@ -37,7 +37,7 @@ const Navbar = () => {
                 alt="Logotip de La Igualitària"
                 className="h-12 w-16"
               />
-              <span className="text-2xl font-semibold font-cocotte text-[color:#508BBA]">
+              <span className="text-2xl font-semibold font-cocotte text-gray-50">
                 La Igualitària
               </span>
             </Link>
@@ -51,9 +51,9 @@ const Navbar = () => {
                 to={item.href}
                 className={`${
                   isActive(item.href)
-                    ? "text-pink-600 font-semibold"
-                    : "text-[color:#508BBA] hover:text-primary focus:text-primary font-semibold"
-                } px-3 py-2 text-sm font-glass-antigua transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md`}
+                    ? "text-white underline-offset-4 font-semibold"
+                    : "text-gray-50  font-semibold"
+                } px-3 py-2 font-glass-antigua transition-colors focus:outline-none focus:ring-2 focus:ring-primary hover:scale-110 hover:transition focus:ring-offset-2 rounded-md`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
                 {item.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/fer-se-soci"
-              className="ml-4 inline-flex items-center rounded-md bg-pink-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-pink-600-dark focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2 transition-colors"
+              className="ml-4 inline-flex items-center rounded-md bg-pink-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-pink-600-dark focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 transition-colors hover:scale-110 hover:transition"
             >
               Uneix-te
             </Link>
