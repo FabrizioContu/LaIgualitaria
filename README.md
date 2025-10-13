@@ -21,12 +21,9 @@ La Igualitària és una cooperativa de consum autogestionada i participativa ubi
 - `public/` — Recursos públics
 - `index.html` — Entrada principal de l'app
 
-## 🚀 Scripts
 
-- `npm run dev` — Inicia el servidor de desenvolupament
-- `npm run build` — Genera la build de producció
-- `npm run preview` — Previsualitza la build de producció
-- `npm run lint` — Linting del codi
+
+
 
 ## 📄 Llicència
 
