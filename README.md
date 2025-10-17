@@ -24,6 +24,7 @@ La Igualitària és una cooperativa de consum autogestionada i participativa ubi
 
 
 
+![Captura de pantalla_13-10-2025_111948_localhost](https://github.com/user-attachments/assets/7b26119d-789f-4507-ba19-f5e9103e072d)
 
 ## 📄 Llicència
 
