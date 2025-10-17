@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Search } from "lucide-react";
 
 const Proveidors = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("all");
 
   const categories = [
@@ -125,11 +127,13 @@ const Proveidors = () => {
       categories: ["begudes"],
     },
   ];
-
   const filteredProviders = providers.filter((provider) => {
+    const matchesSearch =
+      provider.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      provider.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
       activeCategory === "all" || provider.categories.includes(activeCategory);
-    return matchesCategory;
+    return matchesSearch && matchesCategory;
   });
 
   return (
@@ -149,8 +153,20 @@ const Proveidors = () => {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        {/* Filter */}
+        {/* Search and Filter */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
+          <div className="relative mb-6 md:mb-0 md:w-1/3">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary"
+              placeholder="Cerca proveïdors..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
               <button

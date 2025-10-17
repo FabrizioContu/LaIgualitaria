@@ -71,12 +71,9 @@ const Participa = () => {
     <section className="py-12 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-accent font-semibold tracking-wide uppercase">
-            Cooperativa de Consum
-          </h2>
-          <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-primary sm:text-4xl">
             <span className="gradient-text">Participa en La Igualitària</span>
-          </p>
+          </h2>
           <p className="mt-4 max-w-2xl text-xl text-gray-600 lg:mx-auto">
             Uneix-te a la nostra comunitat de veïns i veïnes del Poble-sec i
             gaudeix dels beneficis de formar part d'una cooperativa de consum
@@ -107,13 +104,13 @@ const Participa = () => {
         <div className="mt-12 text-center">
           <Link
             to="/fer-se-soci"
-            className="inline-flex bg-pink-600 items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:bg-primary-dark transition-colors"
+            className="inline-flex bg-pink-600 items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:bg-primary-dark transition-colors hover:bg-gray-50 hover:text-pink-600 hover:ring-2 hover:ring-pink-600"
           >
             Fes-te soci/a
           </Link>
           <Link
             to="/proveidors"
-            className="ml-4 inline-flex items-center justify-center px-5 py-3 border border-gray-300 text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors"
+            className="ml-4 inline-flex items-center justify-center px-5 py-3 border border-gray-300 text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors hover:scale-105 hover:transition"
           >
             Coneix els nostres proveïdors
           </Link>

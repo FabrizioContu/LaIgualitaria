@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoCircle from "../assets/logoCircle.webp";
+import laIgualitariaTextBlanc from "../assets/laIgualitariaTextBlanc.webp";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   const navigation = [
     { name: "Inici", href: "/" },
     { name: "Qui Som", href: "/qui-som" },
-    { name: "Fer-se Soci", href: "/fer-se-soci" },
+
     { name: "Comunitat", href: "/comunitat" },
     { name: "Proveïdors", href: "/proveidors" },
   ];
@@ -20,12 +21,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-primary shadow-sm fixed top-0 w-full z-50">
+    <header className="bg-primary/95 shadow-sm fixed top-0 w-full z-50 backdrop-blur-md ">
       <nav
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         aria-label="Primary"
       >
-        <div className="flex w-full items-center justify-between py-4">
+        <div className="flex w-full items-center justify-between py-1">
           <div className="flex items-center">
             <Link
               to="/"
@@ -35,11 +36,14 @@ const Navbar = () => {
               <img
                 src={logoCircle}
                 alt="Logotip de La Igualitària"
-                className="h-12 w-16"
+                className="h-20"
               />
-              <span className="text-2xl font-semibold font-cocotte text-gray-50">
-                La Igualitària
-              </span>
+
+              <img
+                src={laIgualitariaTextBlanc}
+                alt="Logotip de La Igualitària"
+                className="h-12"
+              />
             </Link>
           </div>
 
@@ -63,7 +67,7 @@ const Navbar = () => {
               to="/fer-se-soci"
               className="ml-4 inline-flex items-center rounded-md bg-pink-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-pink-600-dark focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 transition-colors hover:scale-110 hover:transition"
             >
-              Uneix-te
+              Fes-te soci/a
             </Link>
           </div>
 
@@ -98,7 +102,7 @@ const Navbar = () => {
                   to={item.href}
                   className={`${
                     isActive(item.href)
-                      ? "bg-primary-light text-primary font-medium"
+                      ? "bg-primary-light text-white font-medium italic"
                       : "text-gray-700 hover:bg-gray-50"
                   } block px-3 py-2 rounded-md text-base font-glass-antigua focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
                   onClick={() => setIsMenuOpen(false)}
@@ -112,7 +116,7 @@ const Navbar = () => {
                 className="block w-full mt-4 text-center rounded-md bg-pink-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-pink-600-dark focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Uneix-te
+                Fes-te soci/a
               </Link>
             </div>
           </div>

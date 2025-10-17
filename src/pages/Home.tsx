@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-
 import Participa from "../components/Participa";
 import heroImage2 from "../assets/heroImage3.png";
+import Comptador from "@/components/Comptador";
 
 const posts = [
   {
@@ -79,20 +78,6 @@ function Home() {
                 productes de proximitat, de temporada i agroecològics al veïnat
                 del Poble-sec.
               </p>
-              <div className="mt-10 flex items-center space-x-6">
-                <Link
-                  to="/fer-se-soci"
-                  className="rounded-md bg-pink-600 px-5 py-3 text-base font-medium text-white shadow hover:bg-primary-dark transition-colors"
-                >
-                  Fes-te soci/a
-                </Link>
-                <Link
-                  to="/qui-som"
-                  className="text-base font-medium text-gray-900 hover:text-primary"
-                >
-                  Saber-ne més <span aria-hidden="true">→</span>
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -104,25 +89,12 @@ function Home() {
           />
         </div>
       </section>
-
-      <section className="my-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center mb-8">
-            <span className="gradient-text">Coneix el nostre projecte</span>
-          </h2>
-          <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              className="w-full aspect-video rounded-xl shadow-lg"
-              src="https://www.youtube.com/embed/k0DrDVlih0M?si=T6NzQ9pdO1MaAwtR"
-              title="Presentació La Igualitària"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
+      <section>
+        <Comptador />
       </section>
-
-      <Participa />
+      <section>
+        <Participa />
+      </section>
 
       <section className="bg-white py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -193,35 +165,10 @@ function Home() {
           <div className="mt-12 text-center">
             <a
               href="#"
-              className="text-primary font-medium hover:text-primary-dark transition-colors"
+              className="ml-4 inline-flex items-center justify-center px-5 py-3 border border-gray-300 text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors hover:scale-110 hover:transition"
             >
               Veure totes les entrades <span aria-hidden="true">→</span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Map and Location */}
-      <section className="bg-gray-50 py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              <span className="gradient-text">On ens trobaràs</span>
-            </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              Vine a visitar-nos i descobreix els nostres productes
-            </p>
-          </div>
-          <div className="mt-10 rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.685464278037!2d2.165257376551353!3d41.37335289816776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2633ccba0cb%3A0x919c59a89200bfbd!2sCarrer%20de%20Vallhonrat%2C%2018%2C%2008004%20Barcelona!5e0!3m2!1sen!2ses!4v1716305273798!5m2!1sen!2ses"
-              width="100%"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
           </div>
         </div>
       </section>
