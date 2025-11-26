@@ -1,10 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Custom font imports - these URLs are placeholders, replace with actual font URLs when available */
+@font-face {
+  font-family: 'Cocotte';
+  src: url('https://fonts.cdnfonts.com/css/cocotte') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glass Antigua';
+  src: url('https://fonts.cdnfonts.com/css/glass-antiqua') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif,;
+  font-family: system-ui, Avenir, Cocotte, Helvetica, Arial, sans-serif,;
   line-height: 1.5;
   font-weight: 400;
 
@@ -24,7 +43,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.6164 0.0946 244.24);
+  --primary: oklab(0.45 -0.03 -0.09 / 0.99);
+  --primary-light: oklch(0.846 0.0946 244.24);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklab(61.643% 0.19044 -0.06179);
   --secondary-foreground: oklch(0.205 0 0);
@@ -121,7 +141,7 @@ button:focus-visible {
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
+  --color-chart-2: var(--chart-2);  
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);

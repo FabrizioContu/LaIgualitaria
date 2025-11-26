@@ -95,16 +95,16 @@ const Navbar = () => {
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="lg:hidden" id="mobile-menu">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="bg-gray-100  rounded-sm space-y-1 px-2 pb-3 pt-2 mb-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={`${
                     isActive(item.href)
-                      ? "bg-primary-light text-white font-medium italic"
-                      : "text-gray-700 hover:bg-gray-50"
-                  } block px-3 py-2 rounded-md text-base font-glass-antigua focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
+                      ? "border-primary border-2 font-medium italic"
+                      : " hover:bg-gray-200"
+                  } block px-3 py-2 rounded-md text-base text-primary font-glass-antigua focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
                   onClick={() => setIsMenuOpen(false)}
                   aria-current={isActive(item.href) ? "page" : undefined}
                 >
@@ -113,7 +113,11 @@ const Navbar = () => {
               ))}
               <Link
                 to="/fer-se-soci"
-                className="block w-full mt-4 text-center rounded-md bg-pink-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-pink-600-dark focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2"
+                className={`${
+                  isActive("/fer-se-soci")
+                    ? "border-pink-600 border-2 text-pink-600 font-medium italic"
+                    : "bg-pink-600 text-white"
+                } block px-3 py-2 rounded-md text-base text-primary font-glass-antigua focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Fes-te soci/a

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import quiSomImage from "../assets/quiSomImage.webp";
+import { getPageBySlug } from "@/lib/wp";
 
+const [title, content] = await getPageBySlug("qui-som");
 function QuiSom() {
   const values = [
     {
@@ -40,13 +42,15 @@ function QuiSom() {
       <div className="bg-primary-light py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-              <span className="gradient-text">Qui Som</span>
-            </h1>
-            <p className="mt-4 text-lg font-glass-antigua text-gray-600 max-w-3xl mx-auto">
-              Descobreix la història i els valors que ens defineixen com a
-              cooperativa de consum autogestionada al barri de Poble-sec.
-            </p>
+            <h1
+              className="text-4xl font-bold text-gray-900 sm:text-5xl"
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+            <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl"></h1>
+            <p
+              className="mt-4 text-lg font-glass-antigua text-gray-600 max-w-3xl mx-auto"
+              dangerouslySetInnerHTML={{ __html: content }}
+            ></p>
           </div>
         </div>
       </div>
