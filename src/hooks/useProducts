@@ -1,0 +1,65 @@
+// ...existing code...
+import { useEffect, useState, useCallback } from "react";
+import { getProducts, getProductBySlug, getProductsByProvider } from "../lib/wp";
+import type { ProductShape } from "../lib/wp";
+
+export function useProducts(perPage = 100) {
+  const [products, setProducts] = useState<ProductShape[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  const fetch = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await getProducts(perPage);
+      setProducts(data);
+    } catch (e: any) {
+      setError(e instanceof Error ? e : new Error(String(e)));
+    } finally {
+      setLoading(false);
+    }
+  }, [perPage]);
+
+  useEffect(() => { fetch(); }, [fetch]);
+
+  return { products, loading, error, refresh: fetch };
+}
+
+export function useProduct(slug?: string | null) {
+  const [product, setProduct] = useState<ProductShape | null>(null);
+  const [loading, setLoading] = useState<boolean>(!!slug);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    if (!slug) return;
+    let mounted = true;
+    setLoading(true);
+    getProductBySlug(slug)
+      .then(p => { if (!mounted) return; setProduct(p); })
+      .catch(e => { if (!mounted) return; setError(e instanceof Error ? e : new Error(String(e))); })
+      .finally(() => { if (!mounted) return; setLoading(false); });
+    return () => { mounted = false; };
+  }, [slug]);
+
+  return { product, loading, error };
+}
+
+export function useProductsByProvider(providerId?: number) {
+  const [products, setProducts] = useState<ProductShape[]>([]);
+  const [loading, setLoading] = useState<boolean>(!!providerId);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    if (!providerId) return;
+    let mounted = true;
+    setLoading(true);
+    getProductsByProvider(providerId)
+      .then(list => { if (!mounted) return; setProducts(list); })
+      .catch(e => { if (!mounted) return; setError(e instanceof Error ? e : new Error(String(e))); })
+      .finally(() => { if (!mounted) return; setLoading(false); });
+    return () => { mounted = false; };
+  }, [providerId]);
+
+  return { products, loading, error };
+}
