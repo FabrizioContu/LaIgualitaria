@@ -6,9 +6,14 @@ import FesteSoci from "./pages/FesteSoci";
 import Comunitat from "./pages/Comunitat";
 import Proveidors from "./pages/Proveidors";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
+import { Proveidor } from "./pages/Proveidor";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const App = () => (
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route
         path="/"
@@ -47,6 +52,30 @@ const App = () => (
         element={
           <Layout>
             <Proveidors />
+          </Layout>
+        }
+      />{" "}
+      <Route
+        path="/proveidors/:slug"
+        element={
+          <Layout>
+            <Proveidor />
+          </Layout>
+        }
+      />{" "}
+      <Route
+        path="/blog"
+        element={
+          <Layout>
+            <Blog />
+          </Layout>
+        }
+      />
+      <Route
+        path="/blog/:slug"
+        element={
+          <Layout>
+            <BlogPost />
           </Layout>
         }
       />
