@@ -1,40 +1,74 @@
-# La Igualitària
+# La Igualitària — Cooperativa de Consum
 
-La Igualitària és una cooperativa de consum autogestionada i participativa ubicada al barri de Poble-sec, Barcelona. Aquesta aplicació web permet conèixer el projecte, els seus valors, proveïdors, activitats i facilita la participació de noves persones sòcies.
+Plataforma web para la cooperativa de consum autogestionada y participativa **La Igualitària**, ubicada en el Poble-sec de Barcelona. Ofrece productos de proximidad, de temporada y agroecológicos.
 
-## 🛠️ Tecnologies
+## 🚀 Características
 
-- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/) per al bundling i desenvolupament ràpid
-- [Tailwind CSS](https://tailwindcss.com/) per a l'estilització
-- [React Router](https://reactrouter.com/) per a la navegació
-- [Lucide Icons](https://lucide.dev/) per a icones SVG
+- **Blog dinámico** — Entradas desde WordPress con búsqueda y filtrado.
+- **Catálogo de Proveïdors** — Listado de proveedores locales con campos ACF (ubicación, tipo, contacto).
+- **Catálogo de Productes** — Productos relacionados con sus proveedores.
+- **Integración WordPress REST API** — Datos en tiempo real desde WordPress.
+- **Responsive Design** — Diseño mobile-first con Tailwind CSS.
+- **TypeScript** — Código tipado para mayor seguridad.
 
+## 📋 Requisitos
 
-## 🗂️ Estructura del projecte
-
-- `src/` — Codi font principal
-  - `components/` — Components reutilitzables (Navbar, Footer, Layout, etc.)
-  - `pages/` — Pàgines principals de l'aplicació (Home, Qui Som, Comunitat, etc.)
-  - `assets/` — Imatges i icones
-  - `lib/` — Utilitats i helpers
-- `public/` — Recursos públics
-- `index.html` — Entrada principal de l'app
+- Node.js ≥ 16
+- npm o yarn
+- WordPress 5.9+ (con REST API habilitada)
+- ACF (Advanced Custom Fields) para campos personalizados
 
 
 
+## 📁 Estructura del Proyecto
 
-![Captura de pantalla_13-10-2025_111948_localhost](https://github.com/user-attachments/assets/7b26119d-789f-4507-ba19-f5e9103e072d)
+```
+src/
+├── components/       # Componentes reutilizables
+│   ├── Layout.tsx
+│   ├── ScrollToTop.tsx
+│   └── ...
+├── hooks/           # Custom hooks (React)
+│   ├── useLatestPosts.tsx
+│   ├── useProviders.tsx
+│   ├── useProducts.tsx
+│   └── usePost.tsx
+├── lib/
+│   └── wp.ts        # Funciones REST API (WordPress)
+├── pages/           # Páginas principales
+│   ├── Home.tsx
+│   ├── Blog.tsx
+│   ├── BlogPost.tsx
+│   ├── Proveidors.tsx
+│   ├── Proveidor.tsx
+│   └── ...
+├── types/
+│   └── wordpress.ts  # Tipos TypeScript para WordPress
+└── App.tsx          # Enrutamiento principal
+```
 
-## 📄 Llicència
 
-Aquest projecte està sota llicència MIT.
 
----
 
-**Contacte:**  
-Carrer Vallhonrat, 18, 08004 Barcelona  
-laigualitaria@cooperasec.org  
-+34 931947646
+## 📦 Dependencias Principales
 
-Visita'ns i forma
+- **React 18** — Framework UI
+- **Vite** — Bundler y dev server
+- **React Router v6** — Enrutamiento
+- **Tailwind CSS** — Estilos
+- **TypeScript** — Tipado estático
+- **Lucide React** — Iconos
+
+## 📄 Licencia
+
+Proyecto de la Cooperativa La Igualitària. Derechos reservados.
+
+
+
+
+
+**Última actualización**: Noviembre 2025
+
+
+
+
