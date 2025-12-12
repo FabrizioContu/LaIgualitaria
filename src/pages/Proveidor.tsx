@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useProvider } from "../hooks/useProviders";
+import { Spinner } from "@/components/ui/Spinner";
 
 export const Proveidor = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -11,13 +12,18 @@ export const Proveidor = () => {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  const ubicacio = provider?.acf?.ubicacio ?? "";
+  const ubicacion = provider?.acf?.ubicacion ?? "";
   const web = provider?.acf?.web ?? "";
   const email = provider?.acf?.email ?? "";
-  const telefon = provider?.acf?.telefon ?? "";
+  const telefono = provider?.acf?.telefono ?? "";
+  const descripcion = provider?.acf?.descripcion ?? "";
 
   if (loading) {
-    return <div className="mx-auto max-w-7xl px-6 py-16">Carregant...</div>;
+    return (
+      <>
+        <Spinner />
+      </>
+    );
   }
   if (error) {
     return (
@@ -38,9 +44,9 @@ export const Proveidor = () => {
       <article>
         <h1>{provider.title}</h1>
         <div className="flex flex-wrap gap-2 mb-4 py-6">
-          {ubicacio ? (
+          {ubicacion ? (
             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-              {ubicacio}
+              {ubicacion}
             </span>
           ) : null}
 
@@ -58,10 +64,10 @@ export const Proveidor = () => {
               </span>
             </a>
           ) : null}
-          {telefon ? (
-            <a href={`tel:${telefon}`}>
+          {telefono ? (
+            <a href={`tel:${telefono}`}>
               <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-blue-200 text-gray-800 hover:bg-blue-300">
-                📞 {telefon}
+                📞 {telefono}
               </span>
             </a>
           ) : null}
@@ -75,7 +81,7 @@ export const Proveidor = () => {
         )}
         <div
           className="prose mt-6"
-          dangerouslySetInnerHTML={{ __html: String(provider.content) }}
+          dangerouslySetInnerHTML={{ __html: String(descripcion) }}
         />
       </article>
     </main>

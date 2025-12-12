@@ -104,15 +104,9 @@ const Participa = () => {
         <div className="mt-12 text-center">
           <Link
             to="/fer-se-soci"
-            className="inline-flex bg-pink-600 items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:bg-primary-dark transition-colors hover:bg-gray-50 hover:text-pink-600 hover:ring-2 hover:ring-pink-600"
+            className=" _block inline-flex bg-pink-600 items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white hover:bg-primary-dark transition-colors hover:bg-gray-50 hover:text-pink-600 hover:ring-2 hover:ring-pink-600"
           >
-            Fes-te soci/a
-          </Link>
-          <Link
-            to="/proveidors"
-            className="ml-4 inline-flex items-center justify-center px-5 py-3 border border-gray-300 text-base font-medium rounded-md text-primary bg-white hover:bg-gray-50 transition-colors hover:scale-105 hover:transition"
-          >
-            Coneix els nostres proveïdors
+            Fes-te sòcia
           </Link>
         </div>
       </div>

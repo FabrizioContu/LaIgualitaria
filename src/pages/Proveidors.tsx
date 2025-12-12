@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Search } from "lucide-react";
 import { useProviders } from "@/hooks/useProviders";
 import { Link } from "react-router-dom";
+import { MapSection } from "../components/MapSection";
 
 const Proveidors = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -200,6 +201,9 @@ const Proveidors = () => {
           </div>
         )}
       </div>
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <MapSection providers={filteredProviders} />
+      </section>
     </div>
   );
 };

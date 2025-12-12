@@ -1,12 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import { usePost } from "../hooks/usePost";
+import { Spinner } from "@/components/ui/Spinner";
 
 function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const { post, loading, error } = usePost(slug ?? null);
 
   if (loading)
-    return <main className="mx-auto max-w-7xl px-6 py-16">Carregant...</main>;
+    return (
+      <>
+        <Spinner />
+      </>
+    );
   if (error)
     return (
       <main className="mx-auto max-w-7xl px-6 py-16">

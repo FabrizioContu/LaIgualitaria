@@ -5,7 +5,7 @@ import { useLatestPosts } from "@/hooks/useLatestPosts";
 import { getPageBySlug } from "@/lib/wp";
 import { Link } from "react-router-dom";
 
-const [title, content] = await getPageBySlug("/inicio");
+const [title, content] = await getPageBySlug("/la-igualitaria");
 function Home() {
   const { posts, loading } = useLatestPosts(3);
 

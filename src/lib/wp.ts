@@ -127,13 +127,13 @@ function normalizeProduct(p: any): ProductShape {
 }
 
 export const getProviders = async (perPage = 100): Promise<ProviderShape[]> => {
-  const url = `${API_URL}/proveidors?per_page=${perPage}&_embed`;
+  const url = `${API_URL}/proveedores?per_page=${perPage}&_embed`;
   const results = await fetchJSON(url);
   return (results as any[]).map(normalizeProvider);
 };
 
 export const getProviderBySlug = async (slug: string): Promise<ProviderShape | null> => {
-  const url = `${API_URL}/proveidors?slug=${encodeURIComponent(slug)}&_embed`;
+  const url = `${API_URL}/proveedores?slug=${encodeURIComponent(slug)}&_embed`;
   const results = await fetchJSON(url);
   const p = results[0];
   if (!p) return null;
