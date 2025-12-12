@@ -113,12 +113,12 @@ export const MapSection = ({ providers = [] }: MapSectionProps) => {
             attribution="&copy; OpenStreetMap contributors"
           />
           {markerData.map((marker) => (
-            <Marker key={marker.id} position={[marker.lat, marker.lng] as const}>
-              {/* <Tooltip className="">
+            <Marker key={marker.id} position={[marker.lat, marker.lng]}>
+              <Tooltip className="">
                 <p className="font-semibold">{marker.title}</p>
                 <p>{marker.ubicacio}</p>
                 <p>{marker.tipus}</p>
-              </Tooltip> */}
+              </Tooltip>
               <Popup>
                 <Link
                   to={`/proveidors/${marker.title
